@@ -41,6 +41,43 @@
             <version>5.8.0-M1</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- Opencsv
+            Project Website : https://opencsv.sourceforge.net/
+            License : Apache 2 https://sourceforge.net/p/opencsv/source/ci/master/tree/LICENSE
+        -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>5.8</version>
+        </dependency>
+
+        <!-- SLF4J
+            Project Website : https://www.slf4j.org/
+            License : MIT https://www.slf4j.org/license.html
+        -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.9</version>
+        </dependency>
+
+        <!-- Hamcrest
+            Project Website : https://hamcrest.org/JavaHamcrest/index
+            License : BSD-3-Clause https://opensource.org/license/bsd-3-clause/
+        -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest</artifactId>
+            <version>2.2</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
 </project>
