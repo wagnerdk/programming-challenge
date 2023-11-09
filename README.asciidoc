@@ -1,7 +1,54 @@
 // custom properties
 :url-repo: https://github.com/bettercodepaul/programming-challenge
 
+
 = BettercallPaul programming challenge
+
+== Solution
+
+This solution splits the challenge in three distinct tasks.
+The different tasks are data reading, data parsing and data analysis. 
+The project is therefore split into three packages.
+Each component is designed to be reusable and extensible.
+
+=== Components
+
+==== Data Reading
+
+The first component handles data reading.
+It reads the provided example files from the resource folder and provides them as Strings.
+If the file does not exist or cannot be read, an exception is thrown.
+Further evolutionary steps could involve swapping this component to support, for example, reading from a web service.
+
+==== Data Parsing
+
+To process the data it is necessary to parse the csv input into objects.
+I use the https://opencsv.sourceforge.net/[Opencsv] library to perform the parsing, to avoid reinventing the wheel.
+I've created a versatile interface called DataParser to facilitate future support for various formats.
+My csv reader implementation of the interface accepts a String and type information to return a list of objects.
+This component works for both the weather and the country data.
+The data validation is also implemented here.
+
+==== Data Analyzer
+
+The data analysis component consists of two classes.
+One class handles the temperature data, calculates the temperature spread and finds the weather record with the lowest spread.
+The other class handles the country data, calculates the population density and finds the country with the highest population density.
+
+All components share a common data model in the model package.
+
+=== Libraries
+
+I use the following libraries: 
+
+. link:adrs/csv-parser-library.md[Opencsv]
+. link:adrs/logging-framework.md[Simple Logging Facade for Java (SLF4J)]
+. link:adrs/testing-assertion-library.md[Hamcrest]
+
+The 'adrs' subfolder contains more detailed explanations for the use of each library in the form of Architectural Decision Records.
+
+
+== Challenge
 
 This repository provides the project scaffold for a simple
 programming challenge. Though the challenge is very simple
